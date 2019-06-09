@@ -3,16 +3,22 @@ package com.pq.server.handler;
 import com.pq.protocol.groupChat.GroupMessageRequestPacket;
 import com.pq.protocol.groupChat.GroupMessageResponsePacket;
 import com.pq.utils.sessionUtils.SessionUtil;
+import io.netty.channel.ChannelHandler;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
 import io.netty.channel.group.ChannelGroup;
 
 /**
  * 处理群聊消息发送请求的逻辑处理器
- * @version 1.0
+ * @version 2.0
  * @author pengqi
  */
+@ChannelHandler.Sharable
 public class GroupMessageRequestHandler extends SimpleChannelInboundHandler<GroupMessageRequestPacket> {
+    public static final GroupMessageRequestHandler INSTANCE = new GroupMessageRequestHandler();
+
+    private GroupMessageRequestHandler(){}
+
     @Override
     protected void channelRead0(ChannelHandlerContext ctx, GroupMessageRequestPacket requestPacket) {
         //获取群号

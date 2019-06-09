@@ -3,8 +3,7 @@ package com.pq.client;
 import com.pq.client.consoleCommand.ConsoleCommandManager;
 import com.pq.client.consoleCommand.LoginConsoleCommand;
 import com.pq.client.handler.*;
-import com.pq.codec.PacketDecoder;
-import com.pq.codec.PacketEncoder;
+import com.pq.codec.PacketCodecHandler;
 import com.pq.codec.Spliter;
 import com.pq.utils.sessionUtils.SessionUtil;
 import io.netty.bootstrap.Bootstrap;
@@ -33,8 +32,8 @@ public class NettyClient {
                     protected void initChannel(Channel channel){
                         //添加基于长度域的拆包器，参数1表示数据包的最大长度，参数2表示协议长度域偏移量，参数3表示协议长度域大小
                         channel.pipeline().addLast(new Spliter());
-                        // channelPipeline中添加解码句柄
-                        channel.pipeline().addLast(new PacketDecoder());
+                        // channelPipeline中添加编解码句柄
+                        channel.pipeline().addLast(new PacketCodecHandler());
                         //channelPipeline中添加登录请求响应句柄
                         channel.pipeline().addLast(new LoginResponseHandler());
                         //channelPipeline中添加消息响应句柄
@@ -51,8 +50,7 @@ public class NettyClient {
                         channel.pipeline().addLast(new ListGroupMembersResponseHandler());
                         //channelPipeline中添加登录注销请求响应句柄
                         channel.pipeline().addLast(new LogoutResponseHandler());
-                        //channelPipeline中添加编码句柄
-                        channel.pipeline().addLast(new PacketEncoder());
+
                     }
                 });
 

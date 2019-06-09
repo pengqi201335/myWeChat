@@ -3,16 +3,22 @@ package com.pq.server.handler;
 import com.pq.protocol.groupChat.JoinGroupRequestPacket;
 import com.pq.protocol.groupChat.JoinGroupResponsePacket;
 import com.pq.utils.sessionUtils.SessionUtil;
+import io.netty.channel.ChannelHandler;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
 import io.netty.channel.group.ChannelGroup;
 
 /**
  * 处理入群申请的逻辑处理器
- * @version 1.0
+ * @version 2.0
  * @author pengqi
  */
+@ChannelHandler.Sharable
 public class JoinGroupRequestHandler extends SimpleChannelInboundHandler<JoinGroupRequestPacket> {
+    public static final JoinGroupRequestHandler INSTANCE = new JoinGroupRequestHandler();
+
+    private JoinGroupRequestHandler(){}
+
     @Override
     protected void channelRead0(ChannelHandlerContext ctx, JoinGroupRequestPacket joinGroupRequestPacket) {
         //用户申请加入的群号

@@ -5,9 +5,10 @@ import io.netty.channel.ChannelInboundHandlerAdapter;
 
 /**
  * ChannelHandler生命周期测试类
- * @version 1.0
+ * @version 2.0
  * @author pengqi
  */
+@Deprecated
 public class LifeCycleTestHandler extends ChannelInboundHandlerAdapter {
     @Override
     public void channelRegistered(ChannelHandlerContext ctx) throws Exception {

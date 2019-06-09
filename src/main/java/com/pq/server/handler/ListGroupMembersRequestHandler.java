@@ -5,6 +5,7 @@ import com.pq.protocol.groupChat.ListGroupMembersResponsePacket;
 import com.pq.session.Session;
 import com.pq.utils.sessionUtils.SessionUtil;
 import io.netty.channel.Channel;
+import io.netty.channel.ChannelHandler;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
 import io.netty.channel.group.ChannelGroup;
@@ -14,10 +15,15 @@ import java.util.List;
 
 /**
  * 处理打印群组成员列表请求的逻辑处理器
- * @version 1.0
+ * @version 2.0
  * @author pengqi
  */
+@ChannelHandler.Sharable
 public class ListGroupMembersRequestHandler extends SimpleChannelInboundHandler<ListGroupMembersRequestPacket> {
+    public static final ListGroupMembersRequestHandler INSTANCE = new ListGroupMembersRequestHandler();
+
+    private ListGroupMembersRequestHandler(){}
+
     @Override
     protected void channelRead0(ChannelHandlerContext ctx, ListGroupMembersRequestPacket requestPacket) {
         //创建打印群组成员列表响应对象

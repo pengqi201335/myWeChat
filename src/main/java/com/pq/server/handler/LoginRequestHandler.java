@@ -5,6 +5,7 @@ import com.pq.protocol.login.LogInResponsePacket;
 import com.pq.session.Session;
 import com.pq.utils.idUtils.IDUtil;
 import com.pq.utils.sessionUtils.SessionUtil;
+import io.netty.channel.ChannelHandler;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
 
@@ -12,10 +13,15 @@ import java.util.Date;
 
 /**
  * 登录请求逻辑处理器
- * @version 1.0
+ * @version 2.0
  * @author pengqi
  */
+@ChannelHandler.Sharable
 public class LoginRequestHandler extends SimpleChannelInboundHandler<LogInRequestPacket> {
+    public static final LoginRequestHandler INSTANCE = new LoginRequestHandler();
+
+    private LoginRequestHandler(){}
+
     /**
      * 处理登录请求的handler，如数据不是登录请求，则传递给下一个handler处理
      * @param channelHandlerContext ChannelPipeline链节点对象

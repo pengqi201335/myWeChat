@@ -5,15 +5,21 @@ import com.pq.protocol.message.MessageResponsePacket;
 import com.pq.session.Session;
 import com.pq.utils.sessionUtils.SessionUtil;
 import io.netty.channel.Channel;
+import io.netty.channel.ChannelHandler;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
 
 /**
  * 用于处理客户端发送至服务端的消息的channelHandler
- * @version 1.0
+ * @version 2.0
  * @author pengqi
  */
+@ChannelHandler.Sharable
 public class MessageRequestHandler extends SimpleChannelInboundHandler<MessageRequestPacket> {
+    public static final MessageRequestHandler INSTANCE = new MessageRequestHandler();
+
+    private MessageRequestHandler(){}
+
     /**
      * 处理客户端发送的消息
      * @param channelHandlerContext ChannelPipeline链节点对象

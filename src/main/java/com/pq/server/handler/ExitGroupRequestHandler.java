@@ -3,16 +3,22 @@ package com.pq.server.handler;
 import com.pq.protocol.groupChat.ExitGroupRequestPacket;
 import com.pq.protocol.groupChat.ExitGroupResponsePacket;
 import com.pq.utils.sessionUtils.SessionUtil;
+import io.netty.channel.ChannelHandler;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
 import io.netty.channel.group.ChannelGroup;
 
 /**
  * 处理退群申请的逻辑处理器
- * @version 1.0
+ * @version 2.0
  * @author pengqi
  */
+@ChannelHandler.Sharable
 public class ExitGroupRequestHandler extends SimpleChannelInboundHandler<ExitGroupRequestPacket> {
+    public static final ExitGroupRequestHandler INSTANCE = new ExitGroupRequestHandler();
+
+    private ExitGroupRequestHandler(){}
+
     @Override
     protected void channelRead0(ChannelHandlerContext ctx, ExitGroupRequestPacket exitGroupRequestPacket) {
         //获取群号

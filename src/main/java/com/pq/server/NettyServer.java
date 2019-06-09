@@ -29,19 +29,14 @@ public class NettyServer {
                         //nioSocketChannel.pipeline().addLast(new LifeCycleTestHandler());
                         nioSocketChannel.pipeline().addLast(new Spliter());
                         nioSocketChannel.pipeline().addLast(new PacketDecoder());
-                        nioSocketChannel.pipeline().addLast(new LoginRequestHandler());
-                        nioSocketChannel.pipeline().addLast(new AuthenticateHandler());
-                        nioSocketChannel.pipeline().addLast(new MessageRequestHandler());
-                        nioSocketChannel.pipeline().addLast(new CreateGroupRequestHandler());
-                        nioSocketChannel.pipeline().addLast(new JoinGroupRequestHandler());
-                        nioSocketChannel.pipeline().addLast(new GroupMessageRequestHandler());
-                        nioSocketChannel.pipeline().addLast(new ExitGroupRequestHandler());
-                        nioSocketChannel.pipeline().addLast(new ListGroupMembersRequestHandler());
-                        nioSocketChannel.pipeline().addLast(new LogoutRequestHandler());
+                        nioSocketChannel.pipeline().addLast(LoginRequestHandler.INSTANCE);
+                        nioSocketChannel.pipeline().addLast(AuthenticateHandler.INSTANCE);
+                        //核心功能处理器，缩短事件传播路径
+                        nioSocketChannel.pipeline().addLast(IMCoreRequestHandler.INSTANCE);
                         nioSocketChannel.pipeline().addLast(new PacketEncoder());
                     }
                 });
-                bind(serverBootstrap,1020);
+                bind(serverBootstrap,1024);
     }
 
     private static void bind(final ServerBootstrap serverBootstrap, final int port){
