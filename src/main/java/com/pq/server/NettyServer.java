@@ -1,5 +1,6 @@
 package com.pq.server;
 
+import com.pq.codec.PacketCodecHandler;
 import com.pq.codec.PacketDecoder;
 import com.pq.codec.PacketEncoder;
 import com.pq.codec.Spliter;
@@ -28,12 +29,11 @@ public class NettyServer {
                     protected void initChannel(NioSocketChannel nioSocketChannel){
                         //nioSocketChannel.pipeline().addLast(new LifeCycleTestHandler());
                         nioSocketChannel.pipeline().addLast(new Spliter());
-                        nioSocketChannel.pipeline().addLast(new PacketDecoder());
+                        nioSocketChannel.pipeline().addLast(new PacketCodecHandler());
                         nioSocketChannel.pipeline().addLast(LoginRequestHandler.INSTANCE);
                         nioSocketChannel.pipeline().addLast(AuthenticateHandler.INSTANCE);
                         //核心功能处理器，缩短事件传播路径
                         nioSocketChannel.pipeline().addLast(IMCoreRequestHandler.INSTANCE);
-                        nioSocketChannel.pipeline().addLast(new PacketEncoder());
                     }
                 });
                 bind(serverBootstrap,1024);

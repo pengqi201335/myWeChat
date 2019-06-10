@@ -16,10 +16,10 @@ public class SendToUserConsoleCommand implements ConsoleCommand{
     @Override
     public void exec(Channel ch) {
         Scanner cin = new Scanner(System.in);
+        System.out.print("接收方用户ID:");
+        String toUserID = cin.next();   //消息接收方ID
         //消息发送方用户名
         System.out.print(new Date().toString().substring(11,19)+" 【"+SessionUtil.getSession(ch).getUserName()+"】 ");
-
-        String toUserID = cin.next();   //消息接收方ID
         String message = cin.next();    //消息内容
 
         //创建消息对象

@@ -50,7 +50,7 @@ public class LoginRequestHandler extends SimpleChannelInboundHandler<LogInReques
             lrp_s.setReason(new Date()+"：登录账号/密码校验失败");
             System.err.println(new Date()+"：登录失败");
         }
-        channelHandlerContext.channel().writeAndFlush(lrp_s);
+        channelHandlerContext.writeAndFlush(lrp_s);
     }
 
     /**
