@@ -5,6 +5,8 @@ import com.pq.client.consoleCommand.LoginConsoleCommand;
 import com.pq.client.handler.*;
 import com.pq.codec.PacketCodecHandler;
 import com.pq.codec.Spliter;
+import com.pq.heartBeatAndIdleCheck.HeartBeatTimerHandler;
+import com.pq.heartBeatAndIdleCheck.IMIdleStatusHandler;
 import com.pq.utils.sessionUtils.SessionUtil;
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.*;
@@ -16,8 +18,9 @@ import java.util.concurrent.TimeUnit;
 public class NettyClient {
     private static final int MAX_RETRY = 5;
 
+    private static final Bootstrap bootstrap = new Bootstrap();
+
     public static void main(String[] args){
-        Bootstrap bootstrap = new Bootstrap();
         NioEventLoopGroup group = new NioEventLoopGroup();
 
         bootstrap
@@ -30,6 +33,8 @@ public class NettyClient {
                 .handler(new ChannelInitializer<>() {
                     @Override
                     protected void initChannel(Channel channel){
+                        //在pipeline最前面加上一个空闲检测处理器，若在指定时间内没有收到数据，则断开该连接
+                        channel.pipeline().addLast(new IMIdleStatusHandler());
                         //添加基于长度域的拆包器，参数1表示数据包的最大长度，参数2表示协议长度域偏移量，参数3表示协议长度域大小
                         channel.pipeline().addLast(new Spliter());
                         // channelPipeline中添加编解码句柄
@@ -50,15 +55,17 @@ public class NettyClient {
                         channel.pipeline().addLast(new ListGroupMembersResponseHandler());
                         //channelPipeline中添加登录注销请求响应句柄
                         channel.pipeline().addLast(new LogoutResponseHandler());
+                        //如果客户端一直没有向服务端发送数据，才会发送心跳检测
+                        channel.pipeline().addLast(new HeartBeatTimerHandler());
 
                     }
                 });
 
-        connect(bootstrap,"115.156.251.15",1024,MAX_RETRY);
+        connect("115.156.251.15",1024,MAX_RETRY);
 
     }
 
-    private static void connect(final Bootstrap bootstrap, String host, int port, final int retry){
+    public static void connect(String host, int port, final int retry){
         bootstrap.connect(host,port).addListener((future) ->  {
             if(future.isSuccess()){
                 System.out.println(new Date()+"：连接成功！");
@@ -73,7 +80,7 @@ public class NettyClient {
                 int delay = 1<<(rank-1);
                 System.err.println(new Date()+"：连接失败，第"+rank+"次重连...");
                 //延迟调度，连接失败后等待若干秒，再尝试重连
-                bootstrap.config().group().schedule(()->connect(bootstrap,host,port,retry-1),delay, TimeUnit.SECONDS);
+                bootstrap.config().group().schedule(()->connect(host,port,retry-1),delay, TimeUnit.SECONDS);
             }
         });
     }

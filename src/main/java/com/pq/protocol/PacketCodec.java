@@ -1,5 +1,6 @@
 package com.pq.protocol;
 
+import com.pq.heartBeatAndIdleCheck.HeartBeatRequestPacket;
 import com.pq.protocol.groupChat.*;
 import com.pq.protocol.login.LogInRequestPacket;
 import com.pq.protocol.login.LogInResponsePacket;
@@ -9,6 +10,7 @@ import com.pq.protocol.message.MessageRequestPacket;
 import com.pq.protocol.message.MessageResponsePacket;
 import com.pq.serializer.JsonSerializer;
 import com.pq.serializer.Serializer;
+import com.pq.server.handler.HeartBeatRequestHandler;
 import io.netty.buffer.ByteBuf;
 
 import java.util.HashMap;
@@ -45,6 +47,7 @@ public class PacketCodec {
         packetTypeMap.put(GROUP_MEMBERS_RES,ListGroupMembersResponsePacket.class);  //打印群组成员列表请求响应指令
         packetTypeMap.put(GROUP_MESSAGE_SEND_REQ,GroupMessageRequestPacket.class);  //发送群聊消息请求指令
         packetTypeMap.put(GROUP_MESSAGE_SEND_RES,GroupMessageResponsePacket.class); //响应发送群聊消息请求指令
+        packetTypeMap.put(HEARTBEAT_REQUEST, HeartBeatRequestPacket.class);         //心跳检测请求指令
 
         serializeMap = new HashMap<>();
         Serializer serializer = new JsonSerializer();

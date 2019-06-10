@@ -12,6 +12,7 @@ import java.util.List;
  * @version 1.0
  * @author pengqi
  */
+@Deprecated
 public class PacketDecoder extends ByteToMessageDecoder {
     /**
      * 将ByteBuf对象解码

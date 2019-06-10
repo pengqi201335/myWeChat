@@ -1,9 +1,8 @@
 package com.pq.server;
 
 import com.pq.codec.PacketCodecHandler;
-import com.pq.codec.PacketDecoder;
-import com.pq.codec.PacketEncoder;
 import com.pq.codec.Spliter;
+import com.pq.heartBeatAndIdleCheck.IMIdleStatusHandler;
 import com.pq.server.handler.*;
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.Channel;
@@ -28,9 +27,13 @@ public class NettyServer {
                     @Override
                     protected void initChannel(NioSocketChannel nioSocketChannel){
                         //nioSocketChannel.pipeline().addLast(new LifeCycleTestHandler());
+                        //在pipeline最前面加上一个空闲检测处理器，若在指定时间内没有收到数据，则断开该连接
+                        nioSocketChannel.pipeline().addLast(new IMIdleStatusHandler());
                         nioSocketChannel.pipeline().addLast(new Spliter());
                         nioSocketChannel.pipeline().addLast(new PacketCodecHandler());
                         nioSocketChannel.pipeline().addLast(LoginRequestHandler.INSTANCE);
+                        //心跳检测响应处理器，一旦接收到客户端的心跳信息，立即返回一个相同的心跳检测数据包
+                        nioSocketChannel.pipeline().addLast(HeartBeatRequestHandler.INSTANCE);
                         nioSocketChannel.pipeline().addLast(AuthenticateHandler.INSTANCE);
                         //核心功能处理器，缩短事件传播路径
                         nioSocketChannel.pipeline().addLast(IMCoreRequestHandler.INSTANCE);

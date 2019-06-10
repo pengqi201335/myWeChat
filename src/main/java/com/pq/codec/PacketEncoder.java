@@ -11,6 +11,7 @@ import io.netty.handler.codec.MessageToByteEncoder;
  * @version 1.0
  * @author pengqi
  */
+@Deprecated
 public class PacketEncoder extends MessageToByteEncoder<Packet> {
     /**
      * 将Packet类型对象编码
