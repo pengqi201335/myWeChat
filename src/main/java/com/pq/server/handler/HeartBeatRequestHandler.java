@@ -1,14 +1,17 @@
 package com.pq.server.handler;
 
 import com.pq.heartBeatAndIdleCheck.HeartBeatRequestPacket;
+import io.netty.channel.ChannelHandler;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
 
 /**
  * 心跳检测数据包逻辑处理器
+ * ping-pong型心跳
  * @version 2.0
  * @author pengqi
  */
+@ChannelHandler.Sharable
 public class HeartBeatRequestHandler extends SimpleChannelInboundHandler<HeartBeatRequestPacket> {
     public static final HeartBeatRequestHandler INSTANCE = new HeartBeatRequestHandler();
 

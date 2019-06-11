@@ -18,7 +18,7 @@ import java.util.concurrent.TimeUnit;
 public class NettyServer {
     public static void main(String[] args) {
         ServerBootstrap serverBootstrap = new ServerBootstrap();
-        NioEventLoopGroup boss = new NioEventLoopGroup();
+        NioEventLoopGroup boss = new NioEventLoopGroup(1);
         NioEventLoopGroup worker = new NioEventLoopGroup();
         serverBootstrap
                 .group(boss,worker)     //配置线程模型

@@ -65,13 +65,18 @@ public class NettyClient {
 
     }
 
-    public static void connect(String host, int port, final int retry){
+    private static void connect(String host, int port, final int retry){
         bootstrap.connect(host,port).addListener((future) ->  {
             if(future.isSuccess()){
                 System.out.println(new Date()+"：连接成功！");
                 //开一个线程用于在控制台发送消息
                 Channel channel = ((ChannelFuture)future).channel();
                 startConsoleThread(channel);
+
+                //连接断开触发此方法，
+                channel.closeFuture().addListener(future1 ->
+                    channel.eventLoop().schedule(() -> connect(host, port, MAX_RETRY), 3, TimeUnit.SECONDS)
+                );
             }
             else if(retry==0)
                 System.err.println(new Date()+"：重试次数已用完，放弃连接！");
@@ -102,7 +107,7 @@ public class NettyClient {
 //            }
 
             //控制台键入消息并发送至服务端
-            while (!Thread.interrupted()){
+            while (channel.isActive()){
                 if(!SessionUtil.isLogin(channel)){
                     /* 当前客户端还未登录 */
                     loginConsoleCommand.exec(channel);
@@ -116,6 +121,8 @@ public class NettyClient {
                 }
 
             }
+
+            System.out.println("连接已断开，退出控制台命令线程");
 
         }).start();
     }

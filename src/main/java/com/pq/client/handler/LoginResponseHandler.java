@@ -33,7 +33,8 @@ public class LoginResponseHandler extends SimpleChannelInboundHandler<LogInRespo
     }
 
     @Override
-    public void channelInactive(ChannelHandlerContext ctx) {
+    public void channelInactive(ChannelHandlerContext ctx) throws Exception{
         System.out.println("与myWeChat服务端连接已断开，请检查是否登录！");
+        super.channelInactive(ctx);
     }
 }
