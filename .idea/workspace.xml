@@ -1,87 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="155858a9-d9e3-4e6e-9d79-c869bb149b47" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/pq/heartBeatAndIdleCheck/HeartBeatRequestPacket.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/pq/heartBeatAndIdleCheck/HeartBeatTimerHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/pq/heartBeatAndIdleCheck/IMIdleStatusHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/pq/server/handler/HeartBeatRequestHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pq/client/NettyClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pq/client/NettyClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pq/codec/PacketDecoder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pq/codec/PacketDecoder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pq/codec/PacketEncoder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pq/codec/PacketEncoder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pq/protocol/PacketCodec.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pq/protocol/PacketCodec.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pq/protocol/command/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pq/protocol/command/Command.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pq/server/NettyServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pq/server/NettyServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/pq/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pq/App.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/pq/attribute/Attributes.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pq/attribute/Attributes.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/pq/client/NettyClient$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pq/client/NettyClient$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/pq/client/NettyClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pq/client/NettyClient.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/pq/client/consoleCommand/ConsoleCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pq/client/consoleCommand/ConsoleCommand.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/pq/client/consoleCommand/ConsoleCommandManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pq/client/consoleCommand/ConsoleCommandManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/pq/client/consoleCommand/CreateGroupConsoleCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pq/client/consoleCommand/CreateGroupConsoleCommand.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/pq/client/consoleCommand/ExitGroupConsoleCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pq/client/consoleCommand/ExitGroupConsoleCommand.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/pq/client/consoleCommand/JoinGroupConsoleCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pq/client/consoleCommand/JoinGroupConsoleCommand.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/pq/client/consoleCommand/ListGroupMembersConsoleCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pq/client/consoleCommand/ListGroupMembersConsoleCommand.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/pq/client/consoleCommand/LoginConsoleCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pq/client/consoleCommand/LoginConsoleCommand.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/pq/client/consoleCommand/LogoutConsoleCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pq/client/consoleCommand/LogoutConsoleCommand.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/pq/client/consoleCommand/SendToGroupConsoleCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pq/client/consoleCommand/SendToGroupConsoleCommand.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/pq/client/consoleCommand/SendToUserConsoleCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pq/client/consoleCommand/SendToUserConsoleCommand.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/pq/client/handler/CreateGroupResponseHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pq/client/handler/CreateGroupResponseHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/pq/client/handler/ExitGroupResponseHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pq/client/handler/ExitGroupResponseHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/pq/client/handler/GroupMessageResponseHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pq/client/handler/GroupMessageResponseHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/pq/client/handler/JoinGroupResponseHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pq/client/handler/JoinGroupResponseHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/pq/client/handler/ListGroupMembersResponseHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pq/client/handler/ListGroupMembersResponseHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/pq/client/handler/LoginResponseHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pq/client/handler/LoginResponseHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/pq/client/handler/LogoutResponseHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pq/client/handler/LogoutResponseHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/pq/client/handler/MessageResponseHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pq/client/handler/MessageResponseHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/pq/codec/PacketCodecHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pq/codec/PacketCodecHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/pq/codec/PacketDecoder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pq/codec/PacketDecoder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/pq/codec/PacketEncoder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pq/codec/PacketEncoder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/pq/codec/Spliter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pq/codec/Spliter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/pq/functionTest/ScheduleTask.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pq/functionTest/ScheduleTask.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/pq/protocol/Packet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pq/protocol/Packet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/pq/protocol/PacketCodec.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pq/protocol/PacketCodec.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/pq/protocol/command/Command.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pq/protocol/command/Command.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/pq/protocol/groupChat/CreateGroupRequestPacket.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pq/protocol/groupChat/CreateGroupRequestPacket.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/pq/protocol/groupChat/CreateGroupResponsePacket.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pq/protocol/groupChat/CreateGroupResponsePacket.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/pq/protocol/groupChat/ExitGroupRequestPacket.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pq/protocol/groupChat/ExitGroupRequestPacket.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/pq/protocol/groupChat/ExitGroupResponsePacket.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pq/protocol/groupChat/ExitGroupResponsePacket.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/pq/protocol/groupChat/GroupMessageRequestPacket.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pq/protocol/groupChat/GroupMessageRequestPacket.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/pq/protocol/groupChat/GroupMessageResponsePacket.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pq/protocol/groupChat/GroupMessageResponsePacket.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/pq/protocol/groupChat/JoinGroupRequestPacket.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pq/protocol/groupChat/JoinGroupRequestPacket.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/pq/protocol/groupChat/JoinGroupResponsePacket.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pq/protocol/groupChat/JoinGroupResponsePacket.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/pq/protocol/groupChat/ListGroupMembersRequestPacket.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pq/protocol/groupChat/ListGroupMembersRequestPacket.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/pq/protocol/groupChat/ListGroupMembersResponsePacket.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pq/protocol/groupChat/ListGroupMembersResponsePacket.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/pq/protocol/login/LogInRequestPacket.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pq/protocol/login/LogInRequestPacket.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/pq/protocol/login/LogInResponsePacket.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pq/protocol/login/LogInResponsePacket.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/pq/protocol/logout/LogoutRequestPacket.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pq/protocol/logout/LogoutRequestPacket.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/pq/protocol/logout/LogoutResponsePacket.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pq/protocol/logout/LogoutResponsePacket.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/pq/protocol/message/MessageRequestPacket.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pq/protocol/message/MessageRequestPacket.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/pq/protocol/message/MessageResponsePacket.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pq/protocol/message/MessageResponsePacket.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/pq/serializer/JsonSerializer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pq/serializer/JsonSerializer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/pq/serializer/SerializeAlgorithm.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pq/serializer/SerializeAlgorithm.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/pq/serializer/Serializer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pq/serializer/Serializer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/pq/server/NettyServer$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pq/server/NettyServer$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/pq/server/NettyServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pq/server/NettyServer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/pq/server/handler/AuthenticateHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pq/server/handler/AuthenticateHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/pq/server/handler/CreateGroupRequestHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pq/server/handler/CreateGroupRequestHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/pq/server/handler/ExitGroupRequestHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pq/server/handler/ExitGroupRequestHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/pq/server/handler/GroupMessageRequestHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pq/server/handler/GroupMessageRequestHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/pq/server/handler/IMCoreRequestHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pq/server/handler/IMCoreRequestHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/pq/server/handler/JoinGroupRequestHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pq/server/handler/JoinGroupRequestHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/pq/server/handler/LifeCycleTestHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pq/server/handler/LifeCycleTestHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/pq/server/handler/ListGroupMembersRequestHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pq/server/handler/ListGroupMembersRequestHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/pq/server/handler/LoginRequestHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pq/server/handler/LoginRequestHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/pq/server/handler/LogoutRequestHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pq/server/handler/LogoutRequestHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/pq/server/handler/MessageRequestHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pq/server/handler/MessageRequestHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/pq/session/Session.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pq/session/Session.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/pq/utils/idUtils/IDUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pq/utils/idUtils/IDUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/pq/utils/loginUtils/LoginUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pq/utils/loginUtils/LoginUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/pq/utils/sessionUtils/SessionUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pq/utils/sessionUtils/SessionUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/pq/utils/trafficUtils/Traffic.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pq/utils/trafficUtils/Traffic.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/pq/AppTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/pq/AppTest.class" afterDir="false" />
-    </list>
+    <list default="true" id="155858a9-d9e3-4e6e-9d79-c869bb149b47" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -105,12 +25,26 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/pq/heartBeatAndIdleCheck/HeartBeatRequestPacket.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="480">
-              <caret line="23" column="7" lean-forward="true" selection-start-line="23" selection-start-column="7" selection-end-line="23" selection-end-column="7" />
+              <caret line="23" column="7" selection-start-line="23" selection-start-column="7" selection-end-line="23" selection-end-column="7" />
               <folding>
                 <element signature="e#372#373#0" expanded="true" />
                 <element signature="e#399#400#0" expanded="true" />
                 <element signature="e#455#456#0" expanded="true" />
                 <element signature="e#501#502#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/pq/client/NettyClient.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="106">
+              <caret line="32" column="25" lean-forward="true" selection-start-line="32" selection-start-column="25" selection-end-line="32" selection-end-column="25" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1268#3096#0" expanded="true" />
+                <element signature="e#3095#3096#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -131,8 +65,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/pq/heartBeatAndIdleCheck/IMIdleStatusHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="600">
-              <caret line="25" column="38" lean-forward="true" selection-start-line="25" selection-start-column="38" selection-end-line="25" selection-end-column="38" />
+            <state relative-caret-position="624">
+              <caret line="26" column="24" selection-start-line="26" selection-start-column="24" selection-end-line="26" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#425#426#0" expanded="true" />
@@ -142,19 +76,22 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/pq/client/handler/JoinGroupResponseHandler.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/pq/heartBeatAndIdleCheck/HeartBeatTimerHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+            <state relative-caret-position="654">
+              <caret line="43" column="35" lean-forward="true" selection-start-line="43" selection-start-column="35" selection-end-line="43" selection-end-column="35" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/pq/server/NettyServer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="680">
+            <state relative-caret-position="150">
               <caret line="35" column="94" selection-start-line="35" selection-start-column="94" selection-end-line="35" selection-end-column="94" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -164,19 +101,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/pq/client/handler/ListGroupMembersResponseHandler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/pq/client/handler/LoginResponseHandler.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="664">
-              <caret line="35" column="58" lean-forward="true" selection-start-line="35" selection-start-column="58" selection-end-line="35" selection-end-column="58" />
+              <caret line="35" column="58" selection-start-line="35" selection-start-column="58" selection-end-line="35" selection-end-column="58" />
               <folding>
                 <element signature="e#1290#1291#0" expanded="true" />
                 <element signature="e#1354#1355#0" expanded="true" />
@@ -198,7 +126,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/pq/client/handler/MessageResponseHandler.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="216">
-              <caret line="11" column="3" lean-forward="true" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
+              <caret line="11" column="3" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
             </state>
           </provider>
         </entry>
@@ -271,11 +199,11 @@
         <option value="$PROJECT_DIR$/src/main/java/com/pq/server/handler/HeartBeatRequestHandler.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/pq/client/NettyClient.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/pq/server/NettyServer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/pq/heartBeatAndIdleCheck/HeartBeatTimerHandler.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/pq/protocol/command/Command.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/pq/heartBeatAndIdleCheck/HeartBeatRequestPacket.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/pq/protocol/PacketCodec.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/pq/heartBeatAndIdleCheck/IMIdleStatusHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/pq/heartBeatAndIdleCheck/HeartBeatTimerHandler.java" />
       </list>
     </option>
   </component>
@@ -459,7 +387,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1560151410664" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1560156768420" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -558,18 +486,18 @@
       <workItem from="1559961354571" duration="19363000" />
       <workItem from="1559992795382" duration="14588000" />
       <workItem from="1560056818303" duration="28690000" />
-      <workItem from="1560128959657" duration="12208000" />
+      <workItem from="1560128959657" duration="14291000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="191808000" />
+    <option name="totallyTimeSpent" value="193891000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1853" height="1055" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28310248" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28310248" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -588,7 +516,7 @@
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.54112554" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.50757575" />
-      <window_info anchor="bottom" x="0" y="566" width="1853" height="418" id="Run" order="12" weight="0.4134199" />
+      <window_info anchor="bottom" x="0" y="566" width="1853" height="418" id="Run" order="12" weight="0.5270563" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -926,28 +854,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/pq/client/NettyClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="984">
-          <caret line="62" lean-forward="true" selection-start-line="62" selection-end-line="62" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1134#2678#0" expanded="true" />
-            <element signature="e#2677#2678#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/pq/heartBeatAndIdleCheck/HeartBeatTimerHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="38" column="45" lean-forward="true" selection-start-line="38" selection-start-column="45" selection-end-line="38" selection-end-column="45" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/pq/client/handler/CreateGroupResponseHandler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
@@ -989,7 +895,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/pq/client/handler/LoginResponseHandler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="664">
-          <caret line="35" column="58" lean-forward="true" selection-start-line="35" selection-start-column="58" selection-end-line="35" selection-end-column="58" />
+          <caret line="35" column="58" selection-start-line="35" selection-start-column="58" selection-end-line="35" selection-end-column="58" />
           <folding>
             <element signature="e#1290#1291#0" expanded="true" />
             <element signature="e#1354#1355#0" expanded="true" />
@@ -1007,7 +913,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/pq/client/handler/MessageResponseHandler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
-          <caret line="11" column="3" lean-forward="true" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
+          <caret line="11" column="3" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
         </state>
       </provider>
     </entry>
@@ -1021,7 +927,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/pq/heartBeatAndIdleCheck/HeartBeatRequestPacket.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
-          <caret line="23" column="7" lean-forward="true" selection-start-line="23" selection-start-column="7" selection-end-line="23" selection-end-column="7" />
+          <caret line="23" column="7" selection-start-line="23" selection-start-column="7" selection-end-line="23" selection-end-column="7" />
           <folding>
             <element signature="e#372#373#0" expanded="true" />
             <element signature="e#399#400#0" expanded="true" />
@@ -1041,10 +947,32 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/pq/server/NettyServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="35" column="94" selection-start-line="35" selection-start-column="94" selection-end-line="35" selection-end-column="94" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/pq/client/NettyClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="106">
+          <caret line="32" column="25" lean-forward="true" selection-start-line="32" selection-start-column="25" selection-end-line="32" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1268#3096#0" expanded="true" />
+            <element signature="e#3095#3096#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/pq/heartBeatAndIdleCheck/IMIdleStatusHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="25" column="38" lean-forward="true" selection-start-line="25" selection-start-column="38" selection-end-line="25" selection-end-column="38" />
+        <state relative-caret-position="624">
+          <caret line="26" column="24" selection-start-line="26" selection-start-column="24" selection-end-line="26" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#425#426#0" expanded="true" />
@@ -1053,10 +981,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/pq/server/NettyServer.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/pq/heartBeatAndIdleCheck/HeartBeatTimerHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="35" column="94" selection-start-line="35" selection-start-column="94" selection-end-line="35" selection-end-column="94" />
+        <state relative-caret-position="654">
+          <caret line="43" column="35" lean-forward="true" selection-start-line="43" selection-start-column="35" selection-end-line="43" selection-end-column="35" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
